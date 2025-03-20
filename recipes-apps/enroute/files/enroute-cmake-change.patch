@@ -1,0 +1,13 @@
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 1944913a7..61ad6caea 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -665,7 +665,7 @@ qt_add_resources(
+ find_path(Qt6_TRANSLATION_DIR qtbase_de.qm
+     HINTS
+     ${Qt6Core_DIR}/../../../translations
+-    /usr/translations
++    /usr/share/translations
+     REQUIRED
+ )
+ qt_add_resources(${PROJECT_NAME} translations_qt
