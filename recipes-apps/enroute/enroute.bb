@@ -5,9 +5,10 @@ SECTION = "base/app"
 
 SRC_URI = "git://github.com/Akaflieg-Freiburg/enroute.git;protocol=https;branch=main \
            file://enroute-cmake-change.patch \
+           file://enroute.service \
 "
 
-SRCREV = "fe6a7c16e0158efe0cd1dda7bc5cfc5924ca0b3d"
+SRCREV = "022dacbe37189a203c963d3b01fdfc1fdf164466"
           
 
 
@@ -17,8 +18,8 @@ inherit qt6-cmake
 
 DEPENDS = "	\
     qtbase \
-    qtlottie \
     qt3d \
+    qtlottie \
     qtdeclarative \
     qtdeclarative-native \
     qt5compat \
@@ -62,6 +63,8 @@ do_compile() {
 do_install() {
 	cd ${WORKDIR}/git
 	cmake --install .
+	install -m 0755 -d ${D}${systemd_unitdir}/system
+    	install -m 0644 ${WORKDIR}/enroute.service ${D}${systemd_unitdir}/system/
 }
 
 FILES:${PN} += "/usr/share/icons \
@@ -69,4 +72,10 @@ FILES:${PN} += "/usr/share/icons \
                 /usr/share/icons/hicolor \
                 /usr/share/icons/hicolor/scalable \
                 /usr/share/icons/hicolor/scalable/apps \
+                /usr/lib \
+  		/usr/lib/systemd \
+  		/usr/lib/systemd/system \
 "
+
+SYSTEMD_SERVICE:${PN} += "enroute.service"
+SYSTEMD_AUTO_ENABLE:${PN} = "enable"
