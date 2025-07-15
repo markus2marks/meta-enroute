@@ -1,12 +1,21 @@
+From f4e8e284732fe3c9e9afad9e4df13c8b3b90e8f9 Mon Sep 17 00:00:00 2001
+From: markus marks <markus_marks@web.de>
+Date: Thu, 20 Mar 2025 17:39:37 +0100
+Subject: [PATCH] add files
+
+---
+ src/CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
-index 1944913a7..61ad6caea 100644
+index 9adfc25fc..c7c529f86 100644
 --- a/src/CMakeLists.txt
 +++ b/src/CMakeLists.txt
-@@ -665,7 +665,7 @@ qt_add_resources(
- find_path(Qt6_TRANSLATION_DIR qtbase_de.qm
+@@ -674,7 +674,7 @@ find_path(Qt6_TRANSLATION_DIR qtbase_de.qm
      HINTS
      ${Qt6Core_DIR}/../../../translations
--    /usr/translations
+     /usr/translations
+-    /usr/share/qt6/translations
 +    /usr/share/translations
      REQUIRED
  )
