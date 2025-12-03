@@ -6,7 +6,7 @@ SECTION = "base/app"
 SRC_URI = "git://github.com/maplibre/maplibre-native-qt.git;protocol=https;branch=main \
 "
 
-SRCREV = "c51ca20c36f7156939b3f2442af2b1bbd008c5cc"
+SRCREV = "c6a5e582c7189ba0c162f56eefeeb54487c08d29"
 
 
 S = "${WORKDIR}/git"
@@ -19,6 +19,7 @@ DEPENDS = " \
     qtdeclarative-native \
     qtlocation \
     ccache-native \
+    qtmultimedia \
 "
 
 EXTRA_OECMAKE	 = " \

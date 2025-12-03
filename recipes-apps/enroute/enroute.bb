@@ -1,4 +1,4 @@
-SUMMARY = "This is the GUI for Hespect Software medical device"
+SUMMARY = "Enroute Flight Navigation a mobile flight navigation app "
 DESCRIPTION = "Recipe created by bitbake-layers"
 LICENSE = "CLOSED"
 SECTION = "base/app"
@@ -8,7 +8,11 @@ SRC_URI = "git://github.com/Akaflieg-Freiburg/enroute.git;protocol=https;branch=
            file://enroute.service \
 "
 
+<<<<<<< HEAD
 SRCREV = "e277154affcb5b886c22a2615ce9e996224e2cea"
+=======
+SRCREV = "022dacbe37189a203c963d3b01fdfc1fdf164466"
+>>>>>>> test
           
 
 
