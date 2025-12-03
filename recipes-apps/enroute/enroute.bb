@@ -1,4 +1,4 @@
-SUMMARY = "This is the GUI for Hespect Software medical device"
+SUMMARY = "Enroute Flight Navigation a mobile flight navigation app "
 DESCRIPTION = "Recipe created by bitbake-layers"
 LICENSE = "CLOSED"
 SECTION = "base/app"
